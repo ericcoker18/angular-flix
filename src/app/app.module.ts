@@ -10,6 +10,9 @@ import { TitleListComponent } from './title-list/title-list.component';
 import { HeroButtonComponent } from './hero-button/hero-button.component';
 import { ItemComponent } from './item/item.component';
 import { ListToggleComponent } from './list-toggle/list-toggle.component';
+import { HttpClientModule } from '@angular/common/http'
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { ListToggleComponent } from './list-toggle/list-toggle.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
