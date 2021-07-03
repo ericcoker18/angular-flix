@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { MovieService } from '../service/movie.service';
 
 @Component({
   selector: 'app-list-toggle',
@@ -7,12 +8,12 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class ListToggleComponent implements OnInit {
   @Input() movie;
-  constructor() { }
+  constructor(private movieservice: MovieService) { }
 
   ngOnInit() {
   }
   saveMovieToList(){
-    
+    this.movieservice.SaveToList(this.movie)
   }
 
 }
